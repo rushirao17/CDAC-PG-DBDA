@@ -1,0 +1,83 @@
+1) accept 5 students name and store them in the dictionary by providing keys from 1 to 5 respectively.
+dict1={}
+for i in range(5):
+	name=input("Enter Name: ")
+	dict1[i+1]=name
+print(dict1)
+
+
+
+2) create a dictionary with pairs
+	soap:100
+	deo:300
+	perfume:400
+now accept a product name from user (in any case, so you have to handle "ignore case") and display its price. Also , if the product is not present in the dictionary display the error message " product not available " Note:  you should not get "KeyError:" in the program.
+
+dict1={ 'soap':100, 'deo':300, 'perfume':400 }
+n=str.lower(input(""))
+if n in dict1.keys():
+	print(dict1[n])
+else:
+    print("Product Not Available")
+
+
+
+3) define a class "Student" with members name,age,address and qualification.
+   define parameterized constructor and "str" member function which returns all the members
+   create 4 objects of Student by passing values.
+	now create a dictionary with rollno ( start from 1 ) as a key and student object as a value.
+accept a rollno from user and display all its details i.e. name,age,address and qualification.
+also display message "student not found" in case if rollno entered by user is not available as a key inside the dictionary.
+
+class Student:
+    def __init__(self,name,age,address,qualification):
+        self.name=name
+        self.age=age
+        self.address=address
+        self.qualification=qualification
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}, Address: {self.address}, Qualification: {self.qualification}"
+
+s1=Student("Rushi",22,"Chopda","BE")
+s2=Student("Harshad",21,"Bhusawal","BE")
+s3=Student("Chetan",22,"Jalgaon","CDAC")
+s4=Student("Hitesh",21,"Mumbai","ME")
+
+dict1={}
+dict1[1]=s1
+dict1[2]=s2
+dict1[3]=s3
+dict1[4]=s4
+
+n=int(input())
+if n in dict1.keys():
+    print(dict1[n])
+else:
+    print("Student Not Found")
+
+
+
+4)  Given a dictionary of students and their favourite colours: 
+people={'Arham':'Blue','Lisa':'Yellow',''Vinod:'Purple','Jenny':'Pink'} 
+1. Find out how many students are in the list 
+2. Change Lisa’s favourite colour 
+3. Remove 'Jenny' and her favourite color
+4. Sort and print students and their favourite colours alphabetically by name
+
+people={'Arham':'Blue','Vinod':'Purple','Lisa':'Yellow','Jenny':'Pink'}
+print(len(people.keys()))
+
+people['Lisa']="Red"
+print(people)
+
+del people["Jenny"]
+print(people)
+
+people = dict(sorted(people.items()))
+print(people)
+
+
+
+
+
