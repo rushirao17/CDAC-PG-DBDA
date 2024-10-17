@@ -1,0 +1,50 @@
+"""1) write a function to accept a number and return its square using
+	a) normal function
+	b) lambda"""
+
+def func1(n):
+	return n*n
+print(func1(5))
+print("-------------")
+print((lambda n: n*n)(10))
+
+
+"""2) write a function to display "Hello World" using
+	a) normal function
+	b) lambda """
+
+def func1():
+	print("Hello World!")
+func1()
+print("-------------")
+v=lambda: print("Hello World!")
+v()
+
+
+"""3) write a function with 2 arguments , second argument should be "default argument" and display them. Using
+	a) normal function 
+	b) lambda """
+
+def func1(a,b=10):
+	print(a,b)
+
+func1(5)
+print("-------------")
+v=lambda a,b=3:print(a,b)
+print(v(5))
+
+
+"""4) write a function with variable no. of arguments and display them. Using
+	a) normal function
+	b) lambda """
+
+def func1(*vars):
+	for i in vars:
+		print(i)
+func1(1,2,3,4,5)
+print("-------------")
+x=lambda *vars: [print(i) for i in vars]
+x(1,2,3,4,5)
+
+
+
