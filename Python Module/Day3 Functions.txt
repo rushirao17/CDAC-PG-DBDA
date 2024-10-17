@@ -1,0 +1,111 @@
+1) define 3 functions "add()","modify()" and "delete()" with just a print message.
+now accept input from user as a number. if the number entered is 1, call "add()"
+if it is 2, call "modify()" if it is 3, call "delete()" [ hint: use "match... case" ]
+
+def add():
+    print("Add function called")
+def modify():
+    print("Modify function called")
+def delete():
+    print("Delete function called")
+
+n = int(input("Enter a number:"))
+
+match n:
+    case 1:
+        add()
+    case 2:
+        modify()
+    case 3:
+        delete()
+    case _:
+        print("Invalid number")
+ 
+
+
+2) define a function which accepts a number and return its square.
+def aFun(n):
+	return n*n
+
+n=int(input("Enter a number:"))
+print(aFun(n))
+
+
+
+3) define a function which accepts character,int,string and display them.
+def display(a,b,c):
+    print("Character is:",a)
+    print("Integer is:",b)
+    print("String is:",c)
+
+a=input("Enter a character:")[0]
+b=int(input("Enter an integer:"))
+c=input("Enter a string:")
+display(a,b,c)
+
+
+
+4) define "myfun1()" with a print statement. now define "myfun2()" which should invoke "myfun1()" function. 
+invoke myfun2()
+def myfun1():
+    print("myfun1()")
+def myfun2():
+    myfun1()
+myfun2()
+
+
+
+5) define a function to accept a number. This function should return 1 if a number passed is more than 0
+return -1 if a number passed is less than 0 , else it should return 0.
+def fun(n):
+    if n>0:
+        return 1
+    elif n<0:
+        return -1
+    else:
+        return 0
+    
+n=int(input("Enter a number:"))
+print(fun(n))
+
+
+
+6) define a function which accepts a character and return toggle of it. 
+def toggleChar(n):
+	return str.swapcase(n)
+
+print(toggleChar('x'))
+
+
+
+7) define a function which accepts a string , toggle and return it.
+	[ hint :  use "swapcase()" function of string ]
+def toggleChar(n):
+	return str.swapcase(n)
+
+print(toggleChar('abcXYZ'))
+
+
+
+8) write a function to accept minimum 3 characters and maximum 5 characters. 
+ 	[ use default arguments method ]
+def fun(n1,n2,n3,n4=0,n5=0):
+    print(n1,n2,n3,n4,n5)
+
+fun('a','b','c')
+fun('a','b','c','d')
+fun('a','b','c','d','e')
+
+
+
+9) define a function in such a way that it can accept n number of values and print their sum. [ variable number of arguments]
+def sum1(*args):
+    s=0
+    for i in args:
+        s+=i
+    return s
+
+print(sum1(1,2,3,4,5,6,7,8,9,10))
+
+
+
